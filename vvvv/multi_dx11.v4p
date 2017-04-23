@@ -1,0 +1,233 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="L:\develop\vvvvPlugin\minoPluginsVS2013\PS3Eye\vvvv\multi_dx11.v4p" systemname="tester" filename="L:\develop\vvvvPlugin\minoPluginsVS2013\PS3Eye\bin\Release\tester.v4p" scrollx="0" scrolly="-360">
+   <BOUNDS type="Window" left="1440" top="630" width="14985" height="8220">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.7.0">
+   </PACK>
+   <NODE systemname="PS3Eye (PS3Eye DX11)" filename="PS3Eye.dll" nodename="PS3Eye (PS3Eye DX11)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1125" top="1965" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="ID" visible="1">
+   </PIN>
+   <PIN pinname="AutoGain" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Gain" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="AutoExposure" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Exposure" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="AutoWhiteBalance" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="WhiteBalanceRed" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="WhiteBalanceGreen" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="WhiteBalanceBlue" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="HorizontalFlip" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="VerticalFlip" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="HorizontalKeystone" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="VerticalKeystone" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="XOffset" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="YOffset" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Rotation" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Zoom" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="LensCorrection1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="LensCorrection2" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="LensCorrection3" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="LensBrightness" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="LED" visible="1" slicecount="1" values="0">
+   </PIN>
+   <BOUNDS type="Box" left="1125" top="1965">
+   </BOUNDS>
+   <PIN pinname="FrameRate" slicecount="1" visible="1" values="60">
+   </PIN>
+   <PIN pinname="Resolution" visible="1" slicecount="1" values="CLEYE_VGA">
+   </PIN>
+   <PIN pinname="ColorMode" visible="1" slicecount="1" values="CLEYE_COLOR_RAW">
+   </PIN>
+   </NODE>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InABox" id="2">
+   <BOUNDS type="Node" left="1125" top="2445" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1125" top="2445" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="9270" top="6135" width="6240" height="5055">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Texture Out" dstnodeid="2" dstpinname="Texture In">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="3" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1125" top="1005" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1125" top="1005" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="ID">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="0" dstpinname="ID" linkstyle="PolyLine">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="25" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4800" top="1005" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4800" top="1005" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Enabled" linkstyle="PolyLine">
+   </LINK>
+   <NODE systemname="PS3Eye (PS3Eye DX11)" filename="PS3Eye.dll" nodename="PS3Eye (PS3Eye DX11)" componentmode="Hidden" id="41">
+   <BOUNDS type="Node" left="7575" top="1965" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="ID" visible="1">
+   </PIN>
+   <PIN pinname="AutoGain" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Gain" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="AutoExposure" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Exposure" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="AutoWhiteBalance" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="WhiteBalanceRed" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="WhiteBalanceGreen" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="WhiteBalanceBlue" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="HorizontalFlip" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="VerticalFlip" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="HorizontalKeystone" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="VerticalKeystone" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="XOffset" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="YOffset" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Rotation" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Zoom" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="LensCorrection1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="LensCorrection2" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="LensCorrection3" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="LensBrightness" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="LED" visible="1" slicecount="1" values="0">
+   </PIN>
+   <BOUNDS type="Box" left="7575" top="1965">
+   </BOUNDS>
+   <PIN pinname="FrameRate" slicecount="1" visible="1" values="60">
+   </PIN>
+   <PIN pinname="Resolution" visible="1" slicecount="1" values="CLEYE_VGA">
+   </PIN>
+   <PIN pinname="ColorMode" visible="1" slicecount="1" values="CLEYE_COLOR_RAW">
+   </PIN>
+   </NODE>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InABox" id="40">
+   <BOUNDS type="Node" left="7575" top="2445" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7575" top="2445" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="9270" top="6135" width="6240" height="5055">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="41" srcpinname="Texture Out" dstnodeid="40" dstpinname="Texture In">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="39" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7575" top="1005" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7575" top="1005" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="ID">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="39" srcpinname="Y Output Value" dstnodeid="41" dstpinname="ID" linkstyle="PolyLine">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="42" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="11250" top="1005" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11250" top="1005" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="41" dstpinname="Enabled">
+   </LINK>
+   </PATCH>
